@@ -74,12 +74,14 @@ class Xmas
 
     i = 0
     12.times do
-      puts @sing_whole_song += "#{self.verse(i)}\n\n"
+      @sing_whole_song += "#{self.verse(i)}\n\n"
       i += 1
     end
 
-    @sing_whole_song.slice!(-1)#couldn't figure out how else to delete those last two \n's
-    @sing_whole_song.slice!(-1)
+    2.times do
+      @sing_whole_song.slice!(-1)
+    end #couldn't figure out how else to delete those last two \n's
+
     return @sing_whole_song
   end
 
